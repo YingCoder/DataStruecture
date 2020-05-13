@@ -85,6 +85,9 @@ public class Array<E> {
     public E getLast() {
         return get(size - 1);
     }
+    public E getFirst() {
+        return get(0);
+    }
 
     // 修改 index 索引位置的元素为 e
     void set(int index, E e) {

@@ -11,6 +11,8 @@
     <modules>
         <module>Array</module>
         <module>Stack</module>
+        <module>Queue</module>
+        <module>LinkedList</module>
     </modules>
 
 

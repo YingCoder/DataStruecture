@@ -1,7 +1,6 @@
-
 /**
  * @Author: weizujie
- * @Date: 2020/5/12
+ * @Date: 2020/5/4
  * @Version: 1.0
  * @Github: https://github.com/weizujie
  */
@@ -65,7 +64,7 @@ public class Array<E> {
             resize(2 * data.length);
         }
 
-        // 从右到左遍历，逐个素向右挪一位
+        // 从右到左遍历，逐个元素向右挪一位
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
         }
@@ -81,6 +80,10 @@ public class Array<E> {
             throw new IllegalArgumentException("Index 非法");
         }
         return data[index];
+    }
+
+    public E getLast() {
+        return get(size - 1);
     }
 
     // 修改 index 索引位置的元素为 e

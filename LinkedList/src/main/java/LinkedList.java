@@ -141,6 +141,34 @@ public class LinkedList<E> {
         cur.e = e;
     }
 
+    // 删除元素
+    public E remove(int index) {
+
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("Index 非法");
+        }
+
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+        Node delNode = prev.next;
+        prev.next = delNode.next;
+        delNode.next = null;
+        size--;
+        return delNode.e;
+    }
+
+    // 删除第一个节点
+    public E removeFirst() {
+        return remove(0);
+    }
+
+    // 删除最后一个节点
+    public E removeLast() {
+        return remove(size - 1);
+    }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();

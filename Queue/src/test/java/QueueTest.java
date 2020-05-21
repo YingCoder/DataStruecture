@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 /**
  * @Author: weizujie
  * @Date: 2020/5/13
@@ -5,14 +7,15 @@
  * @Github: https://github.com/weizujie
  */
 public class QueueTest {
-    public static void main(String[] args) {
-        LoopQueue<Integer> loopQueue = new LoopQueue<Integer>();
+    @Test
+    public void LoopQueueTest() {
+
+        LoopQueue queue = new LoopQueue();
 
         for (int i = 0; i < 5; i++) {
-            loopQueue.enqueue(i);
+            queue.enQueue(i);
         }
 
-        System.out.println(loopQueue.toString());
+        queue.deQueue();
     }
-
 }
